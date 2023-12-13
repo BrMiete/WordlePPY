@@ -1,5 +1,5 @@
 let numIntentos = 6;
-let diccionario = ['APPLE', 'MOUSE', 'SOUND'];
+let diccionario = ['APPLE', 'MOUSE', 'SOUND', 'HOUSE'];
 const palabra = diccionario[Math.floor(Math.random()*diccionario.length)];
 
 const ERROR1 = document.getElementById('error1');
@@ -22,7 +22,10 @@ BUTTON.addEventListener('click', ()=> {
                 ROW.appendChild(SPAN)
             }
             GRID.appendChild(ROW)
-            finalizar("<h1>HAS GANADO!</h1>");
+            finalizar("<h1>!HAS GANADO!</h1>");
+            const RESET = document.getElementById('reset');
+            RESET.innerHTML = "Jugar de nuevo";
+            RESET.style.display = 'block';
             return
         }
         const GRID = document.getElementById('grid');
@@ -48,7 +51,11 @@ BUTTON.addEventListener('click', ()=> {
         GRID.appendChild(ROW)
         numIntentos--;
         if (numIntentos == 0){
-            finalizar("<h1>HAS PERDIDO!</h1>");
+            finalizar("<h1>!HAS PERDIDO!</h1>");
+            const RESET = document.getElementById('reset');
+            RESET.innerHTML = "Intentar de nuevo";
+            RESET.style.display = 'block';
+            return
         }
     }
     else if (INPUT.length === 0){
@@ -62,6 +69,7 @@ BUTTON.addEventListener('click', ()=> {
 function leerIntento(){
     let intento = document.getElementById('guess-input');
     intento = intento.value;
+    intento = intento.trim();
     intento = intento.toUpperCase();
     return intento;
 }
@@ -72,4 +80,8 @@ function finalizar(mensaje){
     BUTTON.disabled = true;
     let contenedor = document.getElementById('guesses');
     contenedor.innerHTML = mensaje;
+}
+
+function refreshPage(){
+    window.location.reload();
 }

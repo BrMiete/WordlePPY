@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #CCCCCC;
 }
-    
+
+#contenedor {
+    background: #303030; /*#FFFFFF*/
+    width: 400px;
+    height: 650px;
+    position: absolute;
+    text-align: center;
+    inset: 0;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #060606;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 h1 {
     text-align: center;
     margin-top: 50px;
+    color: #FE8040;
 }
     
 #guess-input {
@@ -13,7 +31,7 @@ h1 {
     padding: 10px;
     font-size: 18px;
     width: 250px;
-    border: 1px solid #ccc;
+    border: 1px solid #FE8040;
 }
     
 #guess-button {
@@ -21,17 +39,38 @@ h1 {
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #0CBABA;
-    color: #fff;
+    background-color: #FE8040; /*#0CBABA*/
+    color: #303030; /*#FFFFFF*/
     border: none;
     border-radius: 3px;
+}
+
+#reset {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FE8040;
+    color: #303030;
+    border: none;
+    border-radius: 3px;
+    display: none;
 }
     
 button:active {
     transform: scale(0.95);
 }
+
+button:disabled {
+    opacity: 0.5;
+}
+
+input:disabled {
+    opacity: 0.5;
+}
     
 .letter {
+    border-radius: 3px;
     border: 1px solid black;
     padding: 3px;
     margin: 3px;
@@ -49,7 +88,7 @@ button:active {
 }
 
 .error {
-    color: red;
+    color: #e30052;
     font-weight: bold;
     display: none;
     text-align: center;
