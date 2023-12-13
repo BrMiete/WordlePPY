@@ -9,7 +9,7 @@
     <body>
         <div id="contenedor">
             <h1>WORDLE</h1>
-            <input type="text" id="guess-input" placeholder="Ingrese una palabra de 5 letras">
+            <input oninput="this.value = this.value.toUpperCase()" type="text" id="guess-input" placeholder="Ingrese una palabra de 5 letras">
             <p class="error" id="error1">* Debe ingresar una palabra</p>
             <p class="error" id="error2">* Debe ingresar una palabra de 5 letras</p>
             <button id="guess-button">Intentar</button>

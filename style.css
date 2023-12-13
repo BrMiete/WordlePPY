@@ -6,13 +6,15 @@ body {
 }
 
 #contenedor {
-    background: #303030; /*#FFFFFF*/
-    width: 400px;
+    background: #303030;
+    max-width: 400px;
+    min-height: 200px;
+    /* width: 400px;
     height: 650px;
-    position: absolute;
+    position: relative; */
     text-align: center;
     inset: 0;
-    margin: auto;
+    margin: 150px auto;
     border-radius: 10px;
     border: 1px solid #060606;
     overflow: hidden;
@@ -21,7 +23,7 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
     color: #FE8040;
 }
     
@@ -39,8 +41,8 @@ h1 {
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #FE8040; /*#0CBABA*/
-    color: #303030; /*#FFFFFF*/
+    background-color: #FE8040;
+    color: #303030;
     border: none;
     border-radius: 3px;
 }
@@ -55,6 +57,7 @@ h1 {
     border: none;
     border-radius: 3px;
     display: none;
+    margin-bottom: 25px;
 }
     
 button:active {
