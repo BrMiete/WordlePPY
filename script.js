@@ -8,13 +8,13 @@ fetch(UrlAPI).then(response => response.json())
     .then(response => {
         /*palabra = removeAccents(response[0].toUpperCase());*/
         palabra = response[0].toUpperCase();
-        console.log(palabra);
+        //console.log(palabra);
     })
     .catch(err => {
         console.log('Hubo un problema con la API');
         let diccionario = ['APPLE', 'MOUSE', 'SOUND', 'HOUSE', 'RESET', 'STYLE', 'ERROR', 'HAPPY', 'PLANE', 'PRINT'];
         palabra = diccionario[Math.floor(Math.random()*diccionario.length)];
-        console.log("ERROR:", palabra);
+        //console.log("ERROR:", palabra);
     })
 
 const ERROR1 = document.getElementById('error1');
